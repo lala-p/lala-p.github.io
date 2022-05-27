@@ -3,12 +3,12 @@ import { HYDRATE } from 'next-redux-wrapper'
 
 import ModeSlice, { ModeState } from '../reducers/ModeSlice'
 
-export interface RootState {
+export interface IState {
     mode: ModeState,
 
 }
 
-const rootReducer = (state: RootState, action: AnyAction): CombinedState<RootState> => {
+const rootReducer = (state: IState, action: AnyAction): CombinedState<IState> => {
     switch (action.type) {
         case HYDRATE:
             return action.payload

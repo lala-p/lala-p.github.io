@@ -1,11 +1,12 @@
 import { AnyAction, configureStore, Reducer, Store } from '@reduxjs/toolkit'
 import { useSelector, useDispatch } from 'react-redux'
 import { createWrapper } from 'next-redux-wrapper'
-import rootReducer, { RootState } from '../reducers'
+import rootReducer, { IState } from '../reducers'
+
 
 const createStore = () => {
     const store = configureStore({
-        reducer: rootReducer as Reducer<RootState, AnyAction>,
+        reducer: rootReducer as Reducer<IState, AnyAction>,
     })
 
     return store

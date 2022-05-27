@@ -7,7 +7,7 @@ interface MenuTabProps {
     
 }
 
-const MenuTab: React.SFC<MenuTabProps> = () => {
+const MenuTab: React.FC<MenuTabProps> = () => {
 
     const currentMode = useAppSelector((state) => state.mode.currentMode)
 
